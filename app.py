@@ -6,6 +6,9 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
+# 11labs
+from elevenlabs import generate, play
+
 load_dotenv()
 
 s = os.getenv('OPENAI_API_KEY')
@@ -51,3 +54,4 @@ if prompt:
         st.info(response['ingredients'])
     with st.expander("Method"):
         st.info(response['cooking']) 
+        
